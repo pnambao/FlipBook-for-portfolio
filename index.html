@@ -3,13 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <title>Mini Sketchbook Flipbook</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.css" />
-  <style> /* Basic sizing & styling */ </style>
+  <style>
+    body { margin: 0; background: #fef8ef; font-family: sans-serif; }
+    #flipbook { width: 280px; height: 420px; margin: 50px auto; }
+    #flipbook .hard {
+      background: #e6d3b3;
+      border: 1px solid #ccc;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 80px;
+    }
+    #flipbook > div {
+      border: 1px solid #ccc;
+      background: white;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
 </head>
 <body>
   <div id="flipbook">
     <div class="hard front-cover">Mini Sketchbook<br><small>Tap/click to see sketches</small></div>
-    <div></div> <!-- blank inner back -->
+    <div></div>
     <div style="background:url('https://images2.imgbox.com/e7/4e/2sHUXcCW_o.png') center/cover;"></div>
     <div style="background:#fff;"></div>
     <div style="background:url('https://images2.imgbox.com/82/4a/JgfOBprK_o.png') center/cover;"></div>
@@ -19,11 +34,17 @@
     <div class="hard back-cover">The End</div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <!-- jQuery (required) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Working Turn.js -->
+  <script src="https://www.turnjs.com/lib/turn.min.js"></script>
   <script>
     $(function(){
-      $('#flipbook').turn({ width:140, height:210, autoCenter:true });
+      $('#flipbook').turn({
+        width: 280,
+        height: 420,
+        autoCenter: true
+      });
     });
   </script>
 </body>
