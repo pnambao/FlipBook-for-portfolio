@@ -4,8 +4,16 @@
   <meta charset="UTF-8" />
   <title>Mini Sketchbook Flipbook</title>
   <style>
-    body { margin: 0; background: #fef8ef; font-family: sans-serif; }
-    #flipbook { width: 280px; height: 420px; margin: 50px auto; }
+    body {
+      margin: 0;
+      background: #fef8ef;
+      font-family: sans-serif;
+    }
+    #flipbook {
+      width: 280px;
+      height: 420px;
+      margin: 50px auto;
+    }
     #flipbook .hard {
       background: #e6d3b3;
       border: 1px solid #ccc;
@@ -15,7 +23,6 @@
     }
     #flipbook > div {
       border: 1px solid #ccc;
-      background: white;
       background-size: cover;
       background-position: center;
     }
@@ -34,9 +41,8 @@
     <div class="hard back-cover">The End</div>
   </div>
 
-  <!-- jQuery (required) -->
+  <!-- Load jQuery and Turn.js -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Working Turn.js -->
   <script src="https://www.turnjs.com/lib/turn.min.js"></script>
   <script>
     $(function(){
@@ -49,3 +55,4 @@
   </script>
 </body>
 </html>
+
