@@ -1,35 +1,21 @@
-<!-- Flipbook Embed via iFrame (Stand-alone HTML) -->
-<!--
-Readymag’s Code widget often blocks external scripts/styles (like Turn.js), which prevents realistic flip animations from loading.
-
-**Solution**: Host your flipbook as a separate HTML file (with Turn.js) and embed it in Readymag via an <iframe>.
--->
-
-<!-- 1. Stand-alone HTML file (host on GitHub Pages, Netlify, or CodePen) named flipbook.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Mini Sketchbook Flipbook</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.css" />
-  <style>
-    body { margin:0; }
-    #flipbook { width:140px; height:210px; margin:0 auto; }
-    #flipbook .hard { background:#e6d3b3; border:1px solid #ccc; }
-    #flipbook > div { border:1px solid #ccc; }
-    /* adjust page backgrounds here */
-  </style>
+  <style> /* Basic sizing & styling */ </style>
 </head>
 <body>
   <div id="flipbook">
     <div class="hard front-cover">Mini Sketchbook<br><small>Tap/click to see sketches</small></div>
-    <div></div>
-    <div style="background:url('https://images2.imgbox.com/e7/4e/2sHUXcCW_o.png') center/cover no-repeat;"></div>
-    <div style="background:#fff"></div>
-    <div style="background:url('https://images2.imgbox.com/82/4a/JgfOBprK_o.png') center/cover no-repeat;"></div>
-    <div style="background:#fff"></div>
-    <div style="background:url('https://images2.imgbox.com/bc/fc/AL6BBZ6D_o.png') center/cover no-repeat;"></div>
-    <div style="background:#fff"></div>
+    <div></div> <!-- blank inner back -->
+    <div style="background:url('https://images2.imgbox.com/e7/4e/2sHUXcCW_o.png') center/cover;"></div>
+    <div style="background:#fff;"></div>
+    <div style="background:url('https://images2.imgbox.com/82/4a/JgfOBprK_o.png') center/cover;"></div>
+    <div style="background:#fff;"></div>
+    <div style="background:url('https://images2.imgbox.com/bc/fc/AL6BBZ6D_o.png') center/cover;"></div>
+    <div style="background:#fff;"></div>
     <div class="hard back-cover">The End</div>
   </div>
 
@@ -42,10 +28,3 @@ Readymag’s Code widget often blocks external scripts/styles (like Turn.js), wh
   </script>
 </body>
 </html>
-
-<!-- 2. In Readymag, use an iFrame embed: -->
-<iframe src="https://yourdomain.com/flipbook.html" width="150" height="220" frameborder="0" style="display:block; margin:0 auto;"></iframe>
-
-<!--
-This approach ensures Turn.js loads properly. You get realistic flip animations and blank backs, and you only need one simple embed in Readymag.
--->
